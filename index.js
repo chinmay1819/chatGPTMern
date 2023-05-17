@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 const port = 5000;
 const configuration = new Configuration({
     organization: "org-ZdvsInttkOXWQ8pMHujvKzBt",
-    apiKey: "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"
+    apiKey: "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"
 })
 const openai = new OpenAIApi(configuration);
 
