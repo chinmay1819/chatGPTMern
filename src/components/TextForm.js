@@ -42,10 +42,9 @@ const TextForm = (props) => {
             </div>
             <div className='container my-2'>
                 <h4>Response from ChatGPT </h4>
-                <p>
+                <pre><code>{post}</code></pre>
 
-                    {post}
-                </p>
+                    
 
             </div>
         </>
