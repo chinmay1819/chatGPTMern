@@ -11,7 +11,11 @@ const TextForm = (props) => {
     const handleOnChange = (event) => {
         setText(event.target.value)
     }
-
+    const handleReadClick = () => {
+        var msg = new SpeechSynthesisUtterance();
+        msg.text = post;
+        window.speechSynthesis.speak(msg);
+    }
     const createPost = () => {
         axios
             .post(baseURL, {
@@ -37,7 +41,8 @@ const TextForm = (props) => {
                 </div>
                 <button className='btn btn-primary mx-1' onClick={createPost}>Send</button>
                 <button className='btn btn-primary mx-1' onClick={handleClearText}>Clear</button>
-
+                <button className='btn btn-primary mx-1' onClick={handleReadClick}>Read</button>
+                
 
             </div>
             <div className='container my-2'>
