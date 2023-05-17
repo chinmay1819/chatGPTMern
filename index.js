@@ -15,7 +15,8 @@ const configuration = new Configuration({
 })
 const openai = new OpenAIApi(configuration);
 app.get('/',async(req,res)=>{
-    res.send('api key ', process.env.KEY)
+    // res.send('api key ', process.env.KEY)
+    res.send('this is live')
 })
 app.post('/ask', async (req, res) => {
 
