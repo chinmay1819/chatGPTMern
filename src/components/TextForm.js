@@ -3,22 +3,11 @@ import axios from "axios";
 
 const TextForm = (props) => {
     const [text, setText] = useState('');
-    const baseURL = 'http://localhost:5000/ask';
+    //for local use...
+    // const baseURL = 'http://localhost:5000/ask';
+    const baseURL = 'https://backendforchatmern.onrender.com/ask'
     const [post, setPost] = useState('');
 
-    const handleReadClick = () => {
-        var msg = new SpeechSynthesisUtterance();
-        msg.text = text;
-        window.speechSynthesis.speak(msg);
-    }
-    const handleUpClick = () => {
-        let newText = text.toUpperCase();
-        setText(newText);
-    }
-    const handleLowClick = () => {
-        let newText = text.toLowerCase();
-        setText(newText);
-    }
     const handleOnChange = (event) => {
         setText(event.target.value)
     }
